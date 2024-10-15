@@ -6,12 +6,14 @@ import Page2 from './pages/Page2';
 import Page3 from './pages/Page3';
 
 function App() {
+  /*
   axios.get('http://localhost:8080/getGichoBaseData', { 
   }).then(response => {
     console.log('connection success');
   }).catch(error => {
     console.log('error : ' + error);
   });
+  */
   return (
     <BrowserRouter>
     <div className="App">
