@@ -11,24 +11,23 @@ interface menuData {
 }
 
 const Page3 = ()=>{
-    const [data, setData] = useState<menuData[] | null>(null);
+    const [menuDatas, setData] = useState<menuData[] | null>(null);
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get('http://localhost:8080/getMenus');
-                let menuDatas :menuData[] = response.data.menus;
-                setData(menuDatas);
-                console.log(response);
+                let data :menuData[] = response.data.menus;
+                setData(data);
+                console.log(data);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
         };
-
         fetchData();
     }, []);
     return (
         <>
-        {data && data.map((item: menuData, index) => (
+        {menuDatas && menuDatas.map((item: menuData, index) => (
             <div key={index}>
                 <p>메뉴 seq: {item.menu_seq}</p>
                 <p>메뉴 이름: {item.title}</p>
