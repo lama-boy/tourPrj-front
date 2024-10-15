@@ -18,7 +18,7 @@ const Menus = () => {
       });
       return (
         <div>
-            <button onClick={menuClick}>메뉴console log</button>
+            <button onClick={menuClick}>메뉴</button>
         </div>
     )};
 }
