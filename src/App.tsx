@@ -1,9 +1,12 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import axios from 'axios';
-import './App.css';
+import './styles/App.css';
+import './styles/main.scss'
+
 import Login from './pages/Login';
 import Page2 from './pages/Page2';
 import Page3 from './pages/Page3';
+
 
 function App() {
   /*
