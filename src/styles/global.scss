@@ -1,0 +1,251 @@
+/* reset 리셋 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+  text-decoration: none!important;
+}
+a:hover, a:active {
+  text-decoration: none!important;
+}
+button, input, select, textarea, a{
+    outline: none!important;
+}
+/* font 폰트 */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../assets/fonts/Pretendard-Thin.woff2') format('woff2'),
+         url('../assets/fonts/Pretendard-Thin.woff') format('woff');
+    font-weight: 100; // Thin
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../assets/fonts/Pretendard-ExtraLight.woff2') format('woff2'),
+         url('../assets/fonts/Pretendard-ExtraLight.woff') format('woff');
+    font-weight: 200; // Extra-Light
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../assets/fonts/Pretendard-Light.woff2') format('woff2'),
+         url('../assets/fonts/Pretendard-Light.woff') format('woff');
+    font-weight: 300; // Light
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../assets/fonts/Pretendard-Regular.woff2') format('woff2'),
+         url('../assets/fonts/Pretendard-Regular.woff') format('woff');
+    font-weight: 400; // Regular
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../assets/fonts/Pretendard-Medium.woff2') format('woff2'),
+         url('../assets/fonts/Pretendard-Medium.woff') format('woff');
+    font-weight: 500; // Medium
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../assets/fonts/Pretendard-SemiBold.woff2') format('woff2'),
+         url('../assets/fonts/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600; // Semi-Bold
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../assets/fonts/Pretendard-Bold.woff2') format('woff2'),
+         url('../assets/fonts/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../assets/fonts/Pretendard-ExtraBold.woff2') format('woff2'),
+         url('../assets/fonts/Pretendard-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../assets/fonts/Pretendard-Black.woff2') format('woff2'),
+         url('../assets/fonts/Pretendard-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+$font-stack: 'Pretendard', 
+              'Helvetica Neue', 
+              'Arial', 
+              'Verdana', 
+              'Tahoma', 
+              'Trebuchet MS', 
+              'Georgia', 
+              'Garamond', 
+              'Palatino', 
+              'Times New Roman', 
+              'Times', 
+              'Courier New', 
+              'Courier', 
+              'Lucida Console', 
+              'Consolas', 
+              'Menlo', 
+              'Comic Sans MS', 
+              'Brush Script MT', 
+              'Zapf Chancery', 
+              'Papyrus', 
+              'Algerian', 
+              'Impact', 
+              'Arial Black', 
+              'Comic Sans', 
+              'Fantasy', 
+              'monospace', 
+              'sans-serif', 
+              'serif';
+
+body {
+  font-family: $font-stack;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 임시 */
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
+    }
+
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
+
+    .bd-mode-toggle .dropdown-menu .active .bi {
+      display: block !important;
+    }
+/* 임시 */
