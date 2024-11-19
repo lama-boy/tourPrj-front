@@ -2,127 +2,52 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import axios from "axios";
 import { useState, useEffect } from "react";
 
+import Header from '../pages/Header';
+import Footer from '../pages/Footer';
 import Login from '../pages/Login';
 import Page3 from '../pages/Page3';
 
-interface menuData {
-    menu_seq : number;
-    p_menu_seq : number;
-    title : String;
-    url  : String;
-    auth_level : number;
-    depth : number;
-}
-
-const Page2 = ()=>{
-    const [menuDatas, setData] = useState<menuData[] | null>(null);
-    const fetchData = async () => {
-        try {
-            const response = await axios.get('http://localhost:8080/getMenus');
-            let data :menuData[] = response.data.menus;
-            setData(data);
-            console.log(data);
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
-    };
-    useEffect(() => {
-        fetchData();
-    }, []);
-    const menuClick = () => {
-        console.log('menuClick');
-        axios.get('http://192.168.0.93:8080/getMenus').then(response => {
-            if (response.status === 200) {
-                console.log(response.data.menus);
-                setData(response.data.menus);
-            } else {
-                alert('error');
-            }
-        }).catch(error => {
-            console.log('error : ' + error);
-        });
-    };
-
-
-
+const Page2 = () => {
     return (
         <>
-            <header className="p-3 border-bottom border-top">
-                <div className="container">
-                    <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                        <a href="/" className="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                        </a>
-
-                        <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                            {menuDatas && menuDatas.map((item: menuData, index) => (
-                                <li key={index}>
-                                    <a href="#" className="nav-link px-2 text-white">{item.title}</a>
-                                </li>
-                            ))}
-                            
-                            <li>
-                                <Link className='nav-link px-2 text-main' to="/page1">프로젝트</Link>
-                            </li>
-                            <li>
-                                <Link className='nav-link px-2 text-main' to="/page2">학원</Link>
-                            </li>
-                        </ul>
-
-                        <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                            <input type="search" className="form-control rounded-pill" placeholder="Search" aria-label="Search" />
-                        </form>
-                        <div className="text-end">
-                            <button type="button" className="btn me-2">회원가입</button>
-                            <button type="button" className="btn">로그인</button>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            {/* <div>
-                <button onClick={menuClick}>메뉴</button>
-            </div>
-            <div>
-                <table className="table">
-                    <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>depth</th>
-                            <th>title</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {menuDatas && menuDatas.map((item: menuData, index) => (
-                            <tr key={index}>
-                                <td>{item.menu_seq + 1}</td>
-                                <td>{item.depth}</td>
-                                <td>{item.title}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div> */}
-
-
-
-
+            <Header />
             <main>
-                <section className="py-5 text-center container">
-                    <h1 className="fw-bold">Album example</h1>
-                    <div className="row py-lg-5">
-                        <div className="col-lg-6 col-md-8 mx-auto">
-                            <p className="lead text-body-secondary">
-                                Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.
-                            </p>
+                <div id="myCarousel" className="main-carousel carousel slide mb-6 mb-md-8" data-bs-ride="carousel">
+                    <div className="carousel-indicators">
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" className="active" aria-label="Slide 1" aria-current="true"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    </div>
+                    <div className="carousel-inner">
+                        {/* Carousel Slide 1 */}
+                        <div className="carousel-item active" style={{ background: 'url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTh8fHxlbnwwfHx8fHw%3D) center / cover no-repeat' }}>
+                            <div className="carousel-caption text-center">
+                                <a href="https://www.daum.net/" className="animate__animated animate__fadeInDown h-100 w-100" style={{ animationDelay: '0.4s' }}></a>
+                            </div>
+                        </div>
+                        {/* Carousel Slide 2 */}
+                        <div className="carousel-item" style={{ background: 'url(https://i.imgur.com/p87gU8u.jpg) center / cover no-repeat' }}>
+                            <a href="https://www.daum.net/" className="animate__animated animate__fadeInDown h-100 w-100" style={{ animationDelay: '0.4s' }}></a>
                         </div>
                     </div>
-                </section>
-
+                    <button className="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button className="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
+                    </button>
+                </div>
                 <div className="album py-5 bg-body-tertiary">
                     <div className="container">
+                    <div className='row'>
+                        <h2 className='text-main-sub fw-bold text-start'>코스</h2>
+                        <h6 className='text-start'>지금 가장 인기 있는 코스를 확인하세요</h6>
+                        </div>
                         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                             {/* loop */}
                             <div className="col">
-                                <div className="card shadow-sm">
+                                <a className="card shadow-sm border-0">
                                     <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
                                         <title>Placeholder</title>
                                         <rect width="100%" height="100%" fill="#55595c"/>
@@ -137,27 +62,16 @@ const Page2 = ()=>{
                                             <small className="text-body-secondary">9 mins</small>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
-                            {/* loop */}
                         </div>
+                        
                     </div>
                 </div>
-                <footer className="py-3 mt-4 bg-dark">
-                    <ul className="nav justify-content-center border-bottom pb-3 mb-3">
-                        <li className="nav-item"><a href="#" className="nav-link px-2 text-white">Home</a></li>
-                        <li className="nav-item"><a href="#" className="nav-link px-2 text-white">Features</a></li>
-                        <li className="nav-item"><a href="#" className="nav-link px-2 text-white">Pricing</a></li>
-                        <li className="nav-item"><a href="#" className="nav-link px-2 text-white">FAQs</a></li>
-                        <li className="nav-item"><a href="#" className="nav-link px-2 text-white">About</a></li>
-                    </ul>
-                    <p className="text-center text-white">© 2024 Company, Inc</p>
-                </footer>
-        </main>
+            </main>
+            <Footer />
         </>
-    )
+    );
 }
-
-
 
 export default Page2;
