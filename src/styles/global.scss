@@ -129,7 +129,7 @@ header{
     font-family: 'Pretendard';
     src: url('../assets/fonts/Pretendard-Thin.woff2') format('woff2'),
          url('../assets/fonts/Pretendard-Thin.woff') format('woff');
-    font-weight: 100; // Thin
+    font-weight: 100;
     font-style: normal;
 }
 
@@ -137,7 +137,7 @@ header{
     font-family: 'Pretendard';
     src: url('../assets/fonts/Pretendard-ExtraLight.woff2') format('woff2'),
          url('../assets/fonts/Pretendard-ExtraLight.woff') format('woff');
-    font-weight: 200; // Extra-Light
+    font-weight: 200;
     font-style: normal;
 }
 
@@ -153,7 +153,7 @@ header{
     font-family: 'Pretendard';
     src: url('../assets/fonts/Pretendard-Regular.woff2') format('woff2'),
          url('../assets/fonts/Pretendard-Regular.woff') format('woff');
-    font-weight: 400; // Regular
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -161,7 +161,7 @@ header{
     font-family: 'Pretendard';
     src: url('../assets/fonts/Pretendard-Medium.woff2') format('woff2'),
          url('../assets/fonts/Pretendard-Medium.woff') format('woff');
-    font-weight: 500; // Medium
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -169,7 +169,7 @@ header{
     font-family: 'Pretendard';
     src: url('../assets/fonts/Pretendard-SemiBold.woff2') format('woff2'),
          url('../assets/fonts/Pretendard-SemiBold.woff') format('woff');
-    font-weight: 600; // Semi-Bold
+    font-weight: 600;
     font-style: normal;
 }
 
@@ -199,71 +199,71 @@ header{
 
 @font-face {
   font-family: 'TheJamsil';
-  src: url('../assets/fonts/TheJamsil-1-Thin.ttf') format('ttf'),
-       url('../assets/fonts/TheJamsil-OTF-1-Thin.otf') format('otf');
+  src: url('../assets/fonts/TheJamsil-1-Thin.ttf') format('truetype'),
+       url('../assets/fonts/TheJamsil-OTF-1-Thin.otf') format('opentype');
   font-weight: 100; // Thin
   font-style: normal;
 }
 @font-face {
   font-family: 'TheJamsil';
-  src: url('../assets/fonts/TheJamsil-1-Thin.ttf') format('ttf'),
-       url('../assets/fonts/TheJamsil-OTF-1-Thin.otf') format('otf');
+  src: url('../assets/fonts/TheJamsil-1-Thin.ttf') format('truetype'),
+       url('../assets/fonts/TheJamsil-OTF-1-Thin.otf') format('opentype');
   font-weight: 200; // Extra-Light
   font-style: normal;
 }
 
 @font-face {
   font-family: 'TheJamsil';
-  src: url('../assets/fonts/TheJamsil-2-Light.ttf') format('ttf'),
-       url('../assets/fonts/TheJamsil-OTF-2-Light.otf') format('otf');
+  src: url('../assets/fonts/TheJamsil-2-Light.ttf') format('truetype'),
+       url('../assets/fonts/TheJamsil-OTF-2-Light.otf') format('opentype');
   font-weight: 300; // Light
   font-style: normal;
 }
 
 @font-face {
   font-family: 'TheJamsil';
-  src: url('../assets/fonts/TheJamsil-3-Regular.ttf') format('ttf'),
-       url('../assets/fonts/TheJamsil-OTF-3-Regular.otf') format('otf');
+  src: url('../assets/fonts/TheJamsil-2-Light.ttf') format('truetype'),
+  url('../assets/fonts/TheJamsil-OTF-2-Light.otf') format('opentype');
   font-weight: 400; // Regular
   font-style: normal;
 }
 
 @font-face {
   font-family: 'TheJamsil';
-  src: url('../assets/fonts/TheJamsil-4-Medium.ttf') format('ttf'),
-       url('../assets/fonts/TheJamsil-OTF-4-Medium.otf') format('otf');
+  src: url('../assets/fonts/TheJamsil-3-Regular.ttf') format('truetype'),
+       url('../assets/fonts/TheJamsil-OTF-3-Regular.otf') format('opentype');
   font-weight: 500; // Medium
   font-style: normal;
 }
 
 @font-face {
   font-family: 'TheJamsil';
-  src: url('../assets/fonts/TheJamsil-5-Bold.ttf') format('ttf'),
-       url('../assets/fonts/TheJamsil-OTF-5-Bold.otf') format('otf');
+  src: url('../assets/fonts/TheJamsil-4-Medium.ttf') format('truetype'),
+       url('../assets/fonts/TheJamsil-OTF-4-Medium.otf') format('opentype');
   font-weight: 600; // Semi-Bold
   font-style: normal;
 }
 
 @font-face {
   font-family: 'TheJamsil';
-  src: url('../assets/fonts/TheJamsil-5-Bold.ttf') format('ttf'),
-       url('../assets/fonts/TheJamsil-OTF-5-Bold.otf') format('otf');
+  src: url('../assets/fonts/TheJamsil-5-Bold.ttf') format('truetype'),
+       url('../assets/fonts/TheJamsil-OTF-5-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'TheJamsil';
-  src: url('../assets/fonts/TheJamsil-6-ExtraBold.ttf') format('ttf'),
-       url('../assets/fonts/TheJamsil-OTF-6-ExtraBold.otf') format('otf');
+  src: url('../assets/fonts/TheJamsil-6-ExtraBold.ttf') format('truetype'),
+       url('../assets/fonts/TheJamsil-OTF-6-ExtraBold.otf') format('opentype');
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'TheJamsil';
-  src: url('../assets/fonts/TheJamsil-6-ExtraBold.ttf') format('ttf'),
-       url('../assets/fonts/TheJamsil-OTF-6-ExtraBold.otf') format('otf');
+  src: url('../assets/fonts/TheJamsil-6-ExtraBold.ttf') format('truetype'),
+       url('../assets/fonts/TheJamsil-OTF-6-ExtraBold.otf') format('opentype');
   font-weight: 900;
   font-style: normal;
 }
