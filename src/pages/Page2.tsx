@@ -6,8 +6,16 @@ import Header from '../pages/Header';
 import Footer from '../pages/Footer';
 import Login from '../pages/Login';
 import Page3 from '../pages/Page3';
+import Card from '../pages/Card';
 
 const Page2 = () => {
+    const handleView = () => {
+        alert('View button clicked!');
+      };
+    
+      const handleEdit = () => {
+        alert('Edit button clicked!');
+      };
     return (
         <>
             <Header />
@@ -40,29 +48,20 @@ const Page2 = () => {
                 </div>
                 <div className="album py-5 bg-body-tertiary">
                     <div className="container">
-                    <div className='row'>
-                        <h2 className='text-main-sub fw-bold text-start'>코스</h2>
+                    <div className='row mb-4'>
+                        <h2 className='text-main-sub fw-bold text-start mb-2'>코스</h2>
                         <h6 className='text-start'>지금 가장 인기 있는 코스를 확인하세요</h6>
                         </div>
                         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                             {/* loop */}
                             <div className="col">
-                                <a className="card shadow-sm border-0">
-                                    <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                                        <title>Placeholder</title>
-                                        <rect width="100%" height="100%" fill="#55595c"/>
-                                    </svg>
-                                    <div className="card-body">
-                                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <div className="d-flex justify-content-between align-items-center">
-                                            <div className="btn-group">
-                                                <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                                                <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                                            </div>
-                                            <small className="text-body-secondary">9 mins</small>
-                                        </div>
-                                    </div>
-                                </a>
+                                <Card
+                                    imageUrl=""
+                                    title="카드제목"
+                                    date="2024-09-23"
+                                    onView={handleView}
+                                    onEdit={handleEdit}
+                                />
                             </div>
                         </div>
                         
