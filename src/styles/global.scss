@@ -315,9 +315,189 @@ body {
   left: 0;
 }
 /* etc 기타 범용적 */
+/* font 폰트 사이즈 */
+.fs-7 {
+  font-size: var(--fs-7);
+}
+
+.fs-8 {
+  font-size: var(--fs-8);
+}
+
+.fs-9 {
+  font-size: var(--fs-9);
+}
+
+.fs-10 {
+  font-size: var(--fs-10);
+}
+.fs-lg {
+  font-size: 3.5rem;
+}
+
+/* position 포지션 */
+.top-0 {
+  top: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.position-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 .z-99{
   z-index: 99;
 }
+/* display 디스플레이 */
+@layer utilities {
+  .d-list-item {
+      display: list-item;
+     }
+}
+
+/* width 반응형 */
+@media (max-width: 767.98px) { // sm 이하
+  .w-sm-75{
+      width: 75%!important;
+  }
+}
+
+@media (min-width: 768px) { // md 이상
+}
+
+/* margin 마진 */
+.mt-6 { margin-top: 6rem; }
+.mb-6 { margin-bottom: 6rem; }
+.ms-6 { margin-left: 6rem; }
+.me-6 { margin-right: 6rem; }
+.mx-6 { margin-left: 6rem; margin-right: 6rem; }
+.my-6 { margin-top: 6rem; margin-bottom: 6rem; }
+.m-6 { margin: 6rem; }
+.mb-md-6 {
+  @include media-breakpoint-up(md) {
+    margin-bottom: 6rem!important;
+  }
+}
+
+.mt-7 { margin-top: 7rem; }
+.mb-7 { margin-bottom: 7rem; }
+.ms-7 { margin-left: 7rem; }
+.me-7 { margin-right: 7rem; }
+.mx-7 { margin-left: 7rem; margin-right: 7rem; }
+.my-7 { margin-top: 7rem; margin-bottom: 7rem; }
+.m-7 { margin: 7rem; }
+
+.mt-8 { margin-top: 8rem; }
+.mb-8 { margin-bottom: 8rem; }
+.ms-8 { margin-left: 8rem; }
+.me-8 { margin-right: 8rem; }
+.mx-8 { margin-left: 8rem; margin-right: 8rem; }
+.my-8 { margin-top: 8rem; margin-bottom: 8rem; }
+.m-8 { margin: 8rem; }
+.mb-md-8 {
+  @include media-breakpoint-up(md) {
+    margin-bottom: 8rem!important;
+  }
+}
+.mt-9 { margin-top: 9rem; }
+.mb-9 { margin-bottom: 9rem; }
+.ms-9 { margin-left: 9rem; }
+.me-9 { margin-right: 9rem; }
+.mx-9 { margin-left: 9rem; margin-right: 9rem; }
+.my-9 { margin-top: 9rem; margin-bottom: 9rem; }
+.m-9 { margin: 9rem; }
+
+.mt-10 { margin-top: 10rem; }
+.mb-10 { margin-bottom: 10rem; }
+.ms-10 { margin-left: 10rem; }
+.me-10 { margin-right: 10rem; }
+.mx-10 { margin-left: 10rem; margin-right: 10rem; }
+.my-10 { margin-top: 10rem; margin-bottom: 10rem; }
+.m-10 { margin: 10rem; }
+
+/* padding 패딩 */
+.pt-6 { padding-top: 6rem; }
+.pb-6 { padding-bottom: 6rem; }
+.ps-6 { padding-left: 6rem; }
+.pe-6 { padding-right: 6rem; }
+.px-6 { padding-left: 6rem; padding-right: 6rem; }
+.py-6 { padding-top: 6rem; padding-bottom: 6rem; }
+.p-6 { padding: 6rem; }
+
+.pt-7 { padding-top: 7rem; }
+.pb-7 { padding-bottom: 7rem; }
+.ps-7 { padding-left: 7rem; }
+.pe-7 { padding-right: 7rem; }
+.px-7 { padding-left: 7rem; padding-right: 7rem; }
+.py-7 { padding-top: 7rem; padding-bottom: 7rem; }
+.p-7 { padding: 7rem; }
+
+.pt-8 { padding-top: 8rem; }
+.pb-8 { padding-bottom: 8rem; }
+.ps-8 { padding-left: 8rem; }
+.pe-8 { padding-right: 8rem; }
+.px-8 { padding-left: 8rem; padding-right: 8rem; }
+.py-8 { padding-top: 8rem; padding-bottom: 8rem; }
+.p-8 { padding: 8rem; }
+
+.pt-9 { padding-top: 9rem; }
+.pb-9 { padding-bottom: 9rem; }
+.ps-9 { padding-left: 9rem; }
+.pe-9 { padding-right: 9rem; }
+.px-9 { padding-left: 9rem; padding-right: 9rem; }
+.py-9 { padding-top: 9rem; padding-bottom: 9rem; }
+.p-9 { padding: 9rem; }
+
+.pt-10 { padding-top: 10rem; }
+.pb-10 { padding-bottom: 10rem; }
+.ps-10 { padding-left: 10rem; }
+.pe-10 { padding-right: 10rem; }
+.px-10 { padding-left: 10rem; padding-right: 10rem; }
+.py-10 { padding-top: 10rem; padding-bottom: 10rem; }
+.p-10 { padding: 10rem; }
+
+.px-md-auto {
+  padding-left: auto;
+  padding-right: auto;
+
+  @media (min-width: 768px) { // md 사이즈 이상
+      padding-left: auto;
+      padding-right: auto;
+  }
+}
+.font-style-normal{
+  font-style: normal!important;
+}
+.transition-all-03{
+  transition: all 0.3s!important;
+}
+.cursor-pointer{
+  cursor: pointer!important;
+}
+.text-truncate-2 { /* 두줄 말줄임 */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 보여줄 줄 수 설정 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.z-99{
+  z-index: 99;
+}
+
 
 /* theme 커스텀 */
 /* theme text 텍스트 컬러 */

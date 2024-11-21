@@ -7,6 +7,7 @@ import Footer from '../pages/Footer';
 import Login from '../pages/Login';
 import Page3 from '../pages/Page3';
 import Card from '../pages/Card';
+import { MapVisualize as Map } from '../pages/Map';
 
 const Page2 = () => {
     const handleView = () => {
@@ -20,7 +21,7 @@ const Page2 = () => {
         <>
             <Header />
             <main>
-                <div id="myCarousel" className="main-carousel carousel slide mb-6 mb-md-8" data-bs-ride="carousel">
+                <div id="myCarousel" className="main-carousel carousel slide" data-bs-ride="carousel">
                     <div className="carousel-indicators">
                         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" className="active" aria-label="Slide 1" aria-current="true"></button>
                         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -46,25 +47,44 @@ const Page2 = () => {
                         <span className="visually-hidden">Next</span>
                     </button>
                 </div>
-                <div className="album py-5 bg-body-tertiary">
+                <div className="py-5">
                     <div className="container">
-                    <div className='row mb-4'>
-                        <h2 className='text-main-sub fw-bold text-start mb-2'>코스</h2>
-                        <h6 className='text-start'>지금 가장 인기 있는 코스를 확인하세요</h6>
-                        </div>
-                        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                            {/* loop */}
-                            <div className="col">
-                                <Card
-                                    imageUrl=""
-                                    title="카드제목"
-                                    date="2024-09-23"
-                                    onView={handleView}
-                                    onEdit={handleEdit}
-                                />
+                        <section className='mb-6'>
+                            <div className='row mb-4'>
+                                <h2 className='text-main-sub fw-bold text-start mb-2'>코스</h2>
+                                <h6 className='text-start'>지금 가장 인기 있는 코스를 확인하세요</h6>
                             </div>
-                        </div>
-                        
+                            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                    <Card
+                                        imageUrl="https://res.cloudinary.com/heyset/image/upload/v1689582418/buukmenow-folder/no-image-icon-0.jpg"
+                                        title="카드제목"
+                                        date="2024-09-23"
+                                        onView={handleView}
+                                        onEdit={handleEdit}
+                                    />
+                                    <Card
+                                        imageUrl="https://res.cloudinary.com/heyset/image/upload/v1689582418/buukmenow-folder/no-image-icon-0.jpg"
+                                        title="카드제목"
+                                        date="2024-09-23"
+                                        onView={handleView}
+                                        onEdit={handleEdit}
+                                    />
+                                    <Card
+                                        imageUrl="https://res.cloudinary.com/heyset/image/upload/v1689582418/buukmenow-folder/no-image-icon-0.jpg"
+                                        title="카드제목"
+                                        date="2024-09-23"
+                                        onView={handleView}
+                                        onEdit={handleEdit}
+                                    />
+                            </div>
+                        </section>
+                        <section>
+                            <div className='row mb-4'>
+                                <h2 className='text-main-sub fw-bold text-start mb-2'>코스</h2>
+                                <h6 className='text-start'>지금 가장 인기 있는 코스를 확인하세요</h6>
+                            </div>
+                            <Map />
+                        </section>
                     </div>
                 </div>
             </main>
