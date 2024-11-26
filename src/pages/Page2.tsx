@@ -20,7 +20,7 @@ const Page2 = () => {
     return (
         <>
             <Header />
-            <main>
+            <main className='bg-white'>
                 <div id="myCarousel" className="main-carousel carousel slide" data-bs-ride="carousel">
                     <div className="carousel-indicators">
                         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" className="active" aria-label="Slide 1" aria-current="true"></button>
@@ -82,8 +82,35 @@ const Page2 = () => {
                             <div className='row mb-4'>
                                 <h2 className='text-main-sub fw-bold text-start mb-2'>코스</h2>
                                 <h6 className='text-start'>지금 가장 인기 있는 코스를 확인하세요</h6>
+                                <div className="row row-cols-1 row-cols-sm-2">
+                                    <div className=''>
+                                        <Map />
+                                    </div>
+                                    <div className=''>
+                                        <div className='d-flex flex-wrap align-items-center justify-content-between'>
+                                            <h3 className='text-start text-main-sub'>#서울특별시</h3>
+                                            <div className='d-flex col-12 col-lg-6 mt-2 mt-lg-0'>
+                                                <form className="d-flex justify-content-end" role="search">
+                                                    <input type="search" className="form-control rounded-pill top-search-input" placeholder="Search" aria-label="Search" />
+                                                    <i className="bi bi-search top-search-icon text-secondary"></i>
+                                                </form>
+                                                <a>-</a>
+                                                <a>-</a>
+                                            </div>
+                                        </div>
+                                        <div className='mt-4'>
+                                            <div className='d-flex align-items-center justify-content-between border-bottom'>
+                                                <div className='text-start py-3'>
+                                                    <span className='text-main-sub fw-medium pe-1'>[경기도]</span>국제 꽃 박람회
+                                                </div>
+                                                <div className='fs-7' style={{ color: '#999', }}>
+                                                    0000-00-00 ~ 0000-00-00
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <Map />
                         </section>
                     </div>
                 </div>
