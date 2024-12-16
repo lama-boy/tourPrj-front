@@ -7,9 +7,34 @@ import Footer from '../pages/footer';
 import Login from '../pages/Login';
 import Page3 from '../pages/Page3';
 import Card from '../pages/Card';
-import GalleryCarousel from '../pages/GalleryCarousel';
-import { MapVisualize as Map } from '../pages/Map';
-const Page2 = () => {
+import GalleryCarousel from './GalleryCarousel';
+import { MapVisualize as Map } from './Map';
+
+interface matsuri{
+    seq: number;              // 축제 시퀀스
+    matsuri_nm: string;       // 축제명
+    sido_nm: string;          // 시도명
+    sigungu_nm: string;       // 시군구명
+    dong_cd: string;          // 행정동코드
+    dong_nm: string;          // 행정동명
+    rdnmadr_cd: string;       // 도로명 주소코드
+    rdnmadr_nm: string;       // 도로명
+    zip_no: string;           // 우편번호
+    mapX: string;             // 위도
+    mapY: string;             // 경도
+    open_place_nm: string;    // 개최장소명
+    matsuri_begin_date: string; // 축제 시작일
+    matsuri_end_date: string;  // 축제 종료일
+    matsuri_content: string;  // 축제 내용
+    organizer_nm: string;     // 주관기관명
+    auspc_instt_nm: string;   // 주최기관명
+    support_instt_nm: string; // 후원기관명
+    last_chg_date: string;    // 최종변경일자
+    origin_nm: string;        // 출처명
+    base_date: string;        // 기준일자
+}
+
+const Page4 = () => {
     const handleView = () => {
         alert('View button clicked!');
       };
@@ -17,6 +42,25 @@ const Page2 = () => {
       const handleEdit = () => {
         alert('Edit button clicked!');
       };
+
+      const [matsuris, setData] = useState<matsuri[] | null>(null);
+
+      const fetchData = async () => {
+          try {
+              const response = await axios.get('http://localhost:8080/YM/2024-11');
+              const data: matsuri[] = response.data;
+              setData(data);
+              console.log(data);
+              console.log(response);
+          } catch (error) {
+              console.error('Error fetching data:', error);
+          }
+      };
+      
+      useEffect(() => {
+        fetchData();
+    }, []);  
+
     return (
         <>
             <Header />
@@ -101,55 +145,17 @@ const Page2 = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className='mt-3'>
-                                        <div className='d-flex align-items-center justify-content-between border-bottom cursor-pointer'>
-                                            <div className='text-start py-3'>
-                                                <span className='text-main-sub fw-medium pe-1'>[경기도]</span>국제 꽃 박람회
+                                    <div className='mt-4'>
+                                        {matsuris && matsuris.map((item: matsuri) => (    
+                                            <div className='d-flex align-items-center justify-content-between border-bottom'>
+                                                <div className='text-start py-3'>
+                                                    <span className='text-main-sub fw-medium pe-1'>[{item.sido_nm}]</span>{item.matsuri_nm}
+                                                </div>
+                                                <div className='fs-7' style={{ color: '#999', }}>
+                                                    {item.matsuri_begin_date} ~ {item.matsuri_end_date}
+                                                </div>
                                             </div>
-                                            <div className='fs-7' style={{ color: '#999', }}>
-                                                0000-00-00 ~ 0000-00-00
-                                            </div>
-                                        </div>
-                                        <div className='d-flex align-items-center justify-content-between border-bottom cursor-pointer'>
-                                            <div className='text-start py-3'>
-                                                <span className='text-main-sub fw-medium pe-1'>[경기도]</span>국제 꽃 박람회
-                                            </div>
-                                            <div className='fs-7' style={{ color: '#999', }}>
-                                                0000-00-00 ~ 0000-00-00
-                                            </div>
-                                        </div>
-                                        <div className='d-flex align-items-center justify-content-between border-bottom cursor-pointer'>
-                                            <div className='text-start py-3'>
-                                                <span className='text-main-sub fw-medium pe-1'>[경기도]</span>국제 꽃 박람회
-                                            </div>
-                                            <div className='fs-7' style={{ color: '#999', }}>
-                                                0000-00-00 ~ 0000-00-00
-                                            </div>
-                                        </div>
-                                        <div className='d-flex align-items-center justify-content-between border-bottom cursor-pointer'>
-                                            <div className='text-start py-3'>
-                                                <span className='text-main-sub fw-medium pe-1'>[경기도]</span>국제 꽃 박람회
-                                            </div>
-                                            <div className='fs-7' style={{ color: '#999', }}>
-                                                0000-00-00 ~ 0000-00-00
-                                            </div>
-                                        </div>
-                                        <div className='d-flex align-items-center justify-content-between border-bottom cursor-pointer'>
-                                            <div className='text-start py-3'>
-                                                <span className='text-main-sub fw-medium pe-1'>[경기도]</span>국제 꽃 박람회
-                                            </div>
-                                            <div className='fs-7' style={{ color: '#999', }}>
-                                                0000-00-00 ~ 0000-00-00
-                                            </div>
-                                        </div>
-                                        <div className='d-flex align-items-center justify-content-between border-bottom cursor-pointer'>
-                                            <div className='text-start py-3'>
-                                                <span className='text-main-sub fw-medium pe-1'>[경기도]</span>국제 꽃 박람회
-                                            </div>
-                                            <div className='fs-7' style={{ color: '#999', }}>
-                                                0000-00-00 ~ 0000-00-00
-                                            </div>
-                                        </div>
+                                        ))}
                                     </div>
                                 </div>
                             </div>
@@ -171,4 +177,4 @@ const Page2 = () => {
     );
 }
 
-export default Page2;
+export default Page4;
