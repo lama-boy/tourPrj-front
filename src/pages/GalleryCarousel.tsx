@@ -41,69 +41,70 @@ const GalleryCarousel: React.FC = () => {
   }, [currentIndex]);
 
   return (
-    <div className="row mb-4">
-      <h2 className="text-main-sub fw-bold text-start mb-2">코스</h2>
-      <h6 className="text-start">지금 가장 인기 있는 코스를 확인하세요</h6>
-      <div className="row">
-        <div className="d-flex">
-          <div className="col-1 d-flex align-items-center justify-content-start">
-            <button id="galleryPrevButton" onClick={handlePrevClick}>
-              <i className="bi bi-chevron-left fs-lg"></i>
-            </button>
-          </div>
-          <div className="col-10 p-0">
-            <div className="gallery-carousel">
-              <div
-                id="carouselInner"
-                ref={carouselInnerRef}
-                className="gallery-carousel-inner ps-4 pe-4 ps-md-0 pe-md-0 d-flex"
-                style={{
-                  transition: "transform 0.3s ease-in-out",
-                }}
-              >
-                {[...Array(totalItems)].map((_, index) => (
-                  <div
-                    key={index}
-                    className="gallery-carousel-item justify-content-center py-4"
-                  >
-                    <div>
-                      <a
-                        href={`/user/board/gallery/detail/${index + 1412}`}
-                        className="card rounded-diagonal-rl-4 overflow-hidden d-flex flex-column border shadow-sm bg-main-block-hover transition-all-300"
-                      >
-                        <div className="main-gallery-card-inner card-img mb-3 mb-md-1">
-                          <img
-                            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTh8fHxlbnwwfHx8fHw%3D"
-                            alt=""
-                            className="img-fluid gallery-img"
-                          />
+      <div className="d-flex">
+        <div className="col-1 d-flex align-items-center justify-content-start">
+          <button id="galleryPrevButton" className="rounded-2" onClick={handlePrevClick}>
+            <i className="bi bi-chevron-left fs-1 text-main"></i>
+          </button>
+        </div>
+        <div className="col-10 p-0">
+          <div className="gallery-carousel">
+            <div
+              id="carouselInner"
+              ref={carouselInnerRef}
+              className="gallery-carousel-inner d-flex"
+              style={{
+                transition: "transform 0.3s ease-in-out",
+              }}
+            >
+              {[...Array(totalItems)].map((_, index) => (
+                <div
+                  key={index}
+                  className="gallery-carousel-item justify-content-center py-4"
+                >
+                  <div>
+                    <a
+                      href={`/user/board/gallery/detail/${index + 1412}`}
+                      className="card rounded-4 bg-main-dark1 rounded-diagonal-rl-4 overflow-hidden d-flex flex-column border shadow-sm bg-main-block-hover transition-all-300"
+                    >
+                      <div className="main-gallery-card-inner card-img">
+                        <img
+                          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTh8fHxlbnwwfHx8fHw%3D"
+                          alt=""
+                          className="img-fluid gallery-img"
+                        />
+                      </div>
+                      <div className="p-3">
+                        <div className="text-start fs-7 text-main-light2 text-truncate mb-2">
+                          <span className="me-2">#가을</span>
+                          <span className="me-2">#서울</span>
+                          <span className="me-2">#야간개장</span>
+                          <span className="me-2">#문화재</span>
+                          <span className="me-2">#자연경관</span>
                         </div>
-                        <div className="px-3 pb-2 p-md-2">
-                          <div
-                            className="ps-2 mb-4 mb-md-3 mb-lg-4 fw-semibold lh-sm text-truncate-2"
-                            style={{ height: "40px" }}
-                          >
-                            Item {index + 1}
-                          </div>
-                          <div className="pe-2 text-end fs-7 text-secondary pb-2">
-                            2024-12-04 14:25:30
-                          </div>
+                        <div
+                          className="text-white text-start mb-4 mb-md-3 mb-lg-4 fw-semibold lh-sm text-truncate-2"
+                          style={{ height: "40px" }}
+                        >
+                          Item {index + 1}
                         </div>
-                      </a>
-                    </div>
+                        <div className="text-white text-end fs-7 text-secondary pb-1 pe-1">
+                          2024-12-04 14:25:30
+                        </div>
+                      </div>
+                    </a>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
-          <div className="col-1 d-flex align-items-center justify-content-end">
-            <button id="galleryNextButton" onClick={handleNextClick}>
-              <i className="bi bi-chevron-right fs-lg"></i>
-            </button>
-          </div>
+        </div>
+        <div className="col-1 d-flex align-items-center justify-content-end">
+          <button id="galleryNextButton" className="rounded-2" onClick={handleNextClick}>
+            <i className="bi bi-chevron-right fs-1  text-main"></i>
+          </button>
         </div>
       </div>
-    </div>
   );
 };
 

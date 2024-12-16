@@ -39,6 +39,7 @@ $text-default: #222222;
   --bs-link-color-rgb: 34, 34, 34; // 기본 링크 색상 (RGB 값으로 #222)
   --bs-link-hover-color-rgb: 34, 34, 34; // hover 상태 색상 (RGB 값으로 #222)
   --bs-link-opacity: 1; // 링크 색상 불투명도
+  --bs-nav-link-color : #86D4C2;
   --main-color: #13A482;
   --main-sub-color: #0d7e64;
   --main-light-color1: #86D4C2;
@@ -510,10 +511,18 @@ body {
 .text-main-dark1 {
   color: var(--main-dark-color1);
 }
+.text-main-dark2 {
+  color: var(--main-dark-color2);
+}
 .text-main-light1 {
   color: var(--main-light-color1);
 }
-
+.text-main-light2 {
+  color: var(--main-light-color2);
+}
+.text-footer{
+  color: #b0b7bd;
+}
 .text-main-hover:hover {
   color: var(--bs-main)!important;
 }
@@ -521,9 +530,25 @@ body {
   color: #fff!important;
 }
 
-
-
-
+/* theme background bg 백그라운드 컬러 */
+.bg-main {
+  background-color: var(--main-color);
+}
+.bg-main-sub {
+  background-color: var(--main-sub-color);
+}
+.bg-main-dark1 {
+  background-color: var(--main-dark-color1);
+}
+.bg-main-dark2 {
+  background-color: var(--main-dark-color2);
+}
+.bg-main-light1 {
+  background-color: var(--main-light-color1);
+}
+.bg-main-light2 {
+  background-color: var(--main-light-color2);
+}
 
 
 
@@ -665,10 +690,11 @@ body {
   height: 300px;
 }
 /* nav 테마 커스텀 */
-.nav-link{
+.main-top-nav .nav-link{
   color: var(--main-color);
 }
-.nav-link:hover, .nav-link:focus{
+.nav-link:hover, 
+.nav-link:focus{
   color: var(--main-sub-color);
 }
 .top-search-icon{
@@ -740,4 +766,12 @@ body {
   z-index: 2;
   border-radius: 0.5rem;
   color: var(--bs-main);
+  padding: 0.5rem;
+  padding-top: 0.75rem;
+}
+#galleryNextButton{
+  padding-left: 0.75rem;
+}
+#galleryPrevButton{
+  padding-right: 0.75rem;
 }
