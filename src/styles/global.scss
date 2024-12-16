@@ -679,3 +679,65 @@ body {
 .top-search-input{
   max-width: 300px;
 }
+.main-shadow-underline{
+  box-shadow: inset 0 -14px 0 #C4EAE1;
+}
+/* 메인 index */
+.map-next-btn,
+.map-prev-btn{
+  width: 37.5px;
+  height: 37.5px;
+  min-width: 37.5px;
+  min-height: 37.5px;
+}
+.map-next-btn > i{
+  padding-left: 3px;
+  padding-top: 2px;
+}
+.map-prev-btn > i{
+  padding-right: 3px;
+  padding-top: 2px;
+}
+
+/* GalleryCarousel */
+.gallery-div {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.gallery-carousel {
+  overflow: hidden;
+}
+.gallery-carousel-inner {
+  display: flex;
+  width: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.gallery-carousel-inner .gallery-carousel-item {
+  flex: 0 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .gallery-carousel-inner .gallery-carousel-item {
+      width: 33.33%;
+      padding: 0 0.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery-carousel-inner .gallery-carousel-item {
+      width: 33.33%;
+      padding: 0 1rem;
+  }
+}
+#galleryNextButton, #galleryPrevButton{
+  background: #ffffffbb;
+  border: none;
+  z-index: 2;
+  border-radius: 0.5rem;
+  color: var(--bs-main);
+}
