@@ -2,8 +2,8 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-import Header from '../pages/Header';
-import Footer from '../pages/Footer';
+import Header from '../pages/header';
+import Footer from '../pages/footer';
 import Login from '../pages/Login';
 import Page3 from '../pages/Page3';
 import Card from '../pages/Card';

@@ -1,22 +1,31 @@
 import axios from "axios";
 import { useState } from "react";
+import { useDispatch } from 'react-redux';
 import logo from '../assets/img/logo.png';
+import { setToken } from "../store/TokenReducer";
+import { useNavigate } from "react-router-dom";
+
 
 const Login = () => {
+  
   const [userId, setUserId] = useState<string>('');
   const [userPw, setUserPw] = useState<string>('');
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
 
   const loginClick = (e: React.FormEvent) => {
     e.preventDefault(); // 기본 form 제출 방지
     const fd = new FormData();
     fd.append('user_id', userId);
-    fd.append('password', userPw);
+    fd.append('user_pw', userPw);
 
-    axios.post('http://localhost:8080/login.do', fd).then(response => {
-      console.log('response here');
-      console.log(response, response.data);
+    axios.post('http://localhost:8085/user/login', fd).then(response => {
+      console.log(response.status);
+      console.log(response.data);
+      dispatch(setToken(response.data));
+      navigate('/page1');
     }).catch(error => {
-      console.log('axios error');
+      alert('login failed');
       console.log(error);
     });
   };
