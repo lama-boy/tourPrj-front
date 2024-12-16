@@ -2,8 +2,8 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-import Header from '../pages/header';
-import Footer from '../pages/footer';
+import Header from '../pages/Header';
+import Footer from '../pages/Footer';
 import Login from '../pages/Login';
 import Page3 from '../pages/Page3';
 import Card from '../pages/Card';
@@ -78,7 +78,7 @@ const Page2 = () => {
                                     />
                             </div>
                         </section>
-                        <section>
+                        <section className='mb-6'>
                             <div className='row mb-4'>
                                 <h2 className='text-main-sub fw-bold text-start mb-2'>코스</h2>
                                 <h6 className='text-start'>지금 가장 인기 있는 코스를 확인하세요</h6>
@@ -154,7 +154,7 @@ const Page2 = () => {
                                 </div>
                             </div>
                         </section>
-                        <section>
+                        <section className='mb-6'>
                             <div className='row mb-4'>
                                 <h2 className='text-main-sub fw-bold text-start mb-2'>코스</h2>
                                 <h6 className='text-start'>지금 가장 인기 있는 코스를 확인하세요</h6>

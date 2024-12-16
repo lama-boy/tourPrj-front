@@ -39,7 +39,7 @@ const Header = () => {
                         <img src={logo} alt="Logo" height="40" />
                     </a>
 
-                    <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 fw-medium">
+                    <ul className="nav main-top-nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 fw-medium">
                         {menuDatas && menuDatas.map((item: menuData) => (
                             <li key={item.menu_seq}>
                                 <a href={item.url} className="nav-link px-2 text-white">{item.title}</a>
